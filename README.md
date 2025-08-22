@@ -1,0 +1,2 @@
+# Diarium-Magi
+Diarium Magi
