@@ -1,12 +1,22 @@
+/* Подключаем Google Fonts через @import, чтобы стили корректно
+   применялись даже при загруженных локальных файлах. */
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Pacifico&display=swap');
+
 /* Используем курсивный шрифт Dancing Script для меню и элементов интерфейса.
    Оригинальные шрифты P22 Kilkenny Initial Cap и Transforma Script
    защищены авторским правом, поэтому мы заменяем их на свободные
    альтернативы из Google Fonts【803320535720507†L62-L74】. */
 body {
-  font-family: 'Dancing Script', Arial, sans-serif;
+  /* Основной текст и элементы интерфейса оформляем рукописным шрифтом Pacifico */
+  font-family: 'Pacifico', Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
+  /* Фоновая картина – работа Яна ван Эйка. Она находится в публичном
+     достоянии, поэтому может быть использована свободно */
+  background-image: url('assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #333;
 }
 
@@ -14,11 +24,16 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  /* Полупрозрачный фон на фоне картины для лучшей читаемости */
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
 }
 
 /* Декоративный шрифт Cinzel Decorative для заголовков */
+/* Декоративный шрифт Ruslan Display для заголовков и итоговых списков */
 h1, h2 {
-  font-family: 'Cinzel Decorative', 'Dancing Script', Arial, sans-serif;
+  font-family: 'Ruslan Display', 'Pacifico', Arial, sans-serif;
+  font-weight: normal;
 }
 
 h1 {
@@ -43,8 +58,8 @@ section {
 .form-row label {
   flex: 0 0 140px;
   font-weight: bold;
-  /* Меню и подписи используют курсивный шрифт */
-  font-family: 'Dancing Script', Arial, sans-serif;
+  /* Меню и подписи используют рукописный шрифт Pacifico */
+  font-family: 'Pacifico', Arial, sans-serif;
 }
 
 .form-row input,
@@ -54,8 +69,8 @@ section {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  /* Меню и поля ввода используют курсивный шрифт */
-  font-family: 'Dancing Script', Arial, sans-serif;
+  /* Меню и поля ввода используют рукописный шрифт Pacifico */
+  font-family: 'Pacifico', Arial, sans-serif;
 }
 
 button {
@@ -68,8 +83,8 @@ button {
   color: #fff;
   cursor: pointer;
   font-size: 14px;
-  /* Кнопки также используют курсивный шрифт */
-  font-family: 'Dancing Script', Arial, sans-serif;
+  /* Кнопки также используют рукописный шрифт Pacifico */
+  font-family: 'Pacifico', Arial, sans-serif;
 }
 
 button:hover {
@@ -85,7 +100,7 @@ button:hover {
   margin-top: 15px;
   margin-bottom: 5px;
   /* Декоративный шрифт для заголовков списков */
-  font-family: 'Cinzel Decorative', 'Dancing Script', Arial, sans-serif;
+  font-family: 'Ruslan Display', 'Pacifico', Arial, sans-serif;
 }
 
 #entries ul {
@@ -96,5 +111,5 @@ button:hover {
 #entries li {
   margin-bottom: 4px;
   /* Декоративный шрифт для элементов итогового списка */
-  font-family: 'Cinzel Decorative', 'Dancing Script', Arial, sans-serif;
+  font-family: 'Ruslan Display', 'Pacifico', Arial, sans-serif;
 }
