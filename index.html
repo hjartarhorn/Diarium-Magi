@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Переименовали приложение на латинское название -->
+  <title>Diarium Magi (Web)</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Подключаем Google Fonts для декоративных заголовков и курсивного меню -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Подключаем библиотеку pdfMake с поддержкой Unicode (Roboto) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.72/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.72/vfs_fonts.js"></script>
+  <!-- Основная логика приложения -->
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Главное название приложения -->
+    <h1>Diarium Magi</h1>
+
+    <section>
+      <h2>Добавить упражнение</h2>
+      <div class="form-row">
+        <label for="exerciseName">Название:</label>
+        <input type="text" id="exerciseName" placeholder="Название" required>
+      </div>
+      <div class="form-row">
+        <label for="exerciseDate">Дата:</label>
+        <input type="date" id="exerciseDate">
+      </div>
+      <div class="form-row">
+        <label for="exerciseCount">Количество раз:</label>
+        <input type="number" id="exerciseCount" min="1" value="1">
+      </div>
+      <button id="addExercise">Добавить упражнение</button>
+    </section>
+
+    <section>
+      <h2>Добавить практику</h2>
+      <div class="form-row">
+        <label for="practiceType">Тип практики:</label>
+        <select id="practiceType">
+          <option value="Сталкинг">Сталкинг</option>
+          <option value="Сновидение">Сновидение</option>
+          <option value="Сборка личности">Сборка личности</option>
+          <option value="Фиксация ТС">Фиксация ТС</option>
+          <option value="Поиск">Поиск</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="practiceNote">Заметка:</label>
+        <textarea id="practiceNote" rows="3" placeholder="Введите заметку"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="practiceDate">Дата:</label>
+        <input type="date" id="practiceDate">
+      </div>
+      <button id="addPractice">Добавить практику</button>
+    </section>
+
+    <section>
+      <h2>Добавить запись в дневник</h2>
+      <div class="form-row">
+        <label for="diaryNote">Заметка:</label>
+        <textarea id="diaryNote" rows="3" placeholder="Введите заметку"></textarea>
+      </div>
+      <div class="form-row">
+        <label for="diaryDate">Дата:</label>
+        <input type="date" id="diaryDate">
+      </div>
+      <button id="addDiary">Добавить запись</button>
+    </section>
+
+    <section>
+      <h2>Все записи</h2>
+      <div id="entries"></div>
+      <button id="exportPdf">Экспортировать в PDF</button>
+    </section>
+  </div>
+</body>
+</html>
